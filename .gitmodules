@@ -1,3 +1,6 @@
 [submodule "game/deps/ace"]
 	path = game/deps/ace
 	url = https://github.com/AmigaPorts/ACE
+[submodule "game/AmigaCMakeCrossToolchains"]
+	path = AmigaCMakeCrossToolchains
+	url = git@github.com:mirq/AmigaCMakeCrossToolchains.git
