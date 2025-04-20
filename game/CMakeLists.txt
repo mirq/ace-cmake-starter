@@ -27,8 +27,8 @@ set(RES_DIR ${CMAKE_CURRENT_LIST_DIR}/res)
 set(DATA_DIR ${CMAKE_CURRENT_BINARY_DIR}/data)
 
 # ACE
-add_subdirectory(.. ace)
-include_directories(../include)
+add_subdirectory(deps/ace)
+include_directories(deps/include)
 
 # Linux/other UNIX get a lower-case binary name
 set(TARGET_NAME ${PROJECT_NAME_LOWER})
