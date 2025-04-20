@@ -22,6 +22,6 @@ jobs:
       uses: docker://mirqqq/amiga-development:v0.1 # You can replace this with your custom Docker image
       with:
         args: >
-          /bin/bash -c "cd game && 
+          /bin/sh -c "cd game && 
                         cmake .. -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
                         make -j$(nproc)"
