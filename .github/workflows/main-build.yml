@@ -1,0 +1,35 @@
+name: Main build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  build:
+    name: Build Amiga Project
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive  # Important for fetching ACE and the cross toolchains
+    
+    - name: Build with custom Docker image
+      uses: docker://mirqqq/amiga-development:v0.1 # You can replace this with your custom Docker image
+      with:
+        args: >
+          /bin/bash -c "cd game && 
+                        cmake .. -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
+                        make -j$(nproc)"
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: amiga-game-files
+        path: |
+          game/build/showcase.exe
+          game/build/data/
