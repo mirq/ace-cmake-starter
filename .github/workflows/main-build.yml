@@ -25,11 +25,3 @@ jobs:
           /bin/bash -c "cd game && 
                         cmake .. -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
                         make -j$(nproc)"
-    
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: amiga-game-files
-        path: |
-          game/build/showcase.exe
-          game/build/data/
