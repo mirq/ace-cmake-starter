@@ -23,5 +23,5 @@ jobs:
       with:
         args: >
           /bin/sh -c "cd game && 
-                        cmake .. -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
+                        cmake -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
                         make -j$(nproc)"
