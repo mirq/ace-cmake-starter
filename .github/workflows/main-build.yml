@@ -33,4 +33,4 @@ jobs:
       with:
         args: >
           /bin/sh -c "cd /github/workspace/game-build/dist &&
-          lha a /github/workspace/game.lha dist showcase.exe"
+          lha a /github/workspace/game-build/game.lha dist showcase.exe"
