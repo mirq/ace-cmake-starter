@@ -23,10 +23,10 @@ jobs:
       with:
         args: >
           /bin/sh -c "cd game && 
-                        cmake -B /home/amiga/projects/game-build -DVSCODE_AMIGA_EXTENSION_PATH=/home/amiga/.vscode/extensions/bartmanabyss.amiga-debug-1.7.9 -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
-                        cmake --build /home/amiga/projects/game-build --target showcase.elf -j 6"
+                        cmake -B /github/workspace/game-build -DVSCODE_AMIGA_EXTENSION_PATH=/home/amiga/.vscode/extensions/bartmanabyss.amiga-debug-1.7.9 -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
+                        cmake --build /github/workspace/game-build --target showcase.elf -j 6"
     - name: Build lha archive
       uses: docker://mirqqq/amiga-development:v0.3
       with:
         args: >
-          ls /home/amiga/projects/game-build 
+          ls /github/workspace/game-build 
