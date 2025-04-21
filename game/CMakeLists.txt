@@ -33,28 +33,17 @@ include_directories(deps/include)
 # Linux/other UNIX get a lower-case binary name
 set(TARGET_NAME ${PROJECT_NAME_LOWER})
 
-if(ELF2HUNK)
-  # Add elf2hunk step for Bartman compiler
-  set(GAME_LINKED ${TARGET_NAME}.elf) # Intermediate executable
-  set(GAME_EXE ${TARGET_NAME}.exe) # Use this to launch the game
-  add_executable(${GAME_LINKED} ${SOURCES} ${HEADERS})
-  add_custom_command(
-    TARGET ${GAME_LINKED} POST_BUILD
+# Add elf2hunk step for Bartman compiler
+set(GAME_LINKED ${TARGET_NAME}.elf) # Intermediate executable
+set(GAME_EXE ${TARGET_NAME}.exe) # Use this to launch the game
+add_executable(${GAME_LINKED} ${SOURCES} ${HEADERS})
+add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
     COMMAND ${ELF2HUNK} ${GAME_LINKED} ${GAME_EXE}
-  )
-  add_custom_command(
-    TARGET ${GAME_LINKED} POST_BUILD
+)
+add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy ${GAME_EXE} ${CMAKE_CURRENT_BINARY_DIR}/dist
-  )
-
-else()
-  # Just produce the executable with Bebbo compiler
-  SET(GAME_LINKED ${TARGET_NAME})
-  SET(GAME_EXE ${TARGET_NAME})
-  add_executable(${GAME_LINKED} ${SOURCES} ${HEADERS})
-endif()
+)
 
 target_link_libraries(${GAME_LINKED} ace)
 
-# Copy example maps files as is
 file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/dist)
