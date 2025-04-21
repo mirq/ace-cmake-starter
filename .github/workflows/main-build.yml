@@ -23,5 +23,5 @@ jobs:
       with:
         args: >
           /bin/sh -c "cd game && 
-                        cmake -B /home/amiga/projects/game-build -DVSCODE_EXTENSION_PATH=/home/amiga/.vscode/extensions/bartmanabyss.amiga-debug-1.7.9 -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
+                        cmake -B /home/amiga/projects/game-build -DVSCODE_AMIGA_EXTENSION_PATH=/home/amiga/.vscode/extensions/bartmanabyss.amiga-debug-1.7.9 -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
                         make -j$(nproc)"
