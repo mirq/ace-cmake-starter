@@ -19,7 +19,7 @@ jobs:
         submodules: recursive  # Important for fetching ACE and the cross toolchains
     
     - name: Build with custom Docker image
-      uses: docker://mirqqq/amiga-development:v0.2
+      uses: docker://mirqqq/amiga-development:v0.3
       with:
         args: >
           /bin/sh -c "cd game && 
