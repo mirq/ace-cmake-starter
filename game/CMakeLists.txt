@@ -42,6 +42,11 @@ if(ELF2HUNK)
     TARGET ${GAME_LINKED} POST_BUILD
     COMMAND ${ELF2HUNK} ${GAME_LINKED} ${GAME_EXE}
   )
+  add_custom_command(
+    TARGET ${GAME_LINKED} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy ${GAME_EXE} ${CMAKE_CURRENT_BINARY_DIR}/dist
+  )
+
 else()
   # Just produce the executable with Bebbo compiler
   SET(GAME_LINKED ${TARGET_NAME})

@@ -19,17 +19,18 @@ jobs:
         submodules: recursive  # Important for fetching ACE and the cross toolchains
     - name: Create out-dir
       run: mkdir /home/runner/work/ace-cmake-starter/ace-cmake-starter/game-build
-    - name: Create out-dir
+    - name: Set permissions
       run: chmod 777 /home/runner/work/ace-cmake-starter/ace-cmake-starter/game-build
     - name: Build with custom Docker image
-      uses: docker://mirqqq/amiga-development:v0.3
+      uses: docker://mirqqq/amiga-development:v0.4
       with:
         args: >
           /bin/sh -c "cd game && 
                         cmake -B /github/workspace/game-build -DVSCODE_AMIGA_EXTENSION_PATH=/home/amiga/.vscode/extensions/bartmanabyss.amiga-debug-1.7.9 -DCMAKE_TOOLCHAIN_FILE=../AmigaCMakeCrossToolchains/m68k-bartman.cmake && 
                         cmake --build /github/workspace/game-build --target showcase.elf -j 6"
     - name: Build lha archive
-      uses: docker://mirqqq/amiga-development:v0.3
+      uses: docker://mirqqq/amiga-development:v0.4
       with:
         args: >
-          ls /github/workspace/game-build 
+          cd /github/workspace/game-build/dist
+          lha a /github/workspace/game.lha dist showcase.exe
