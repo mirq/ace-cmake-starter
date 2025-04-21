@@ -32,5 +32,5 @@ jobs:
       uses: docker://mirqqq/amiga-development:v0.4
       with:
         args: >
-          cd /github/workspace/game-build/dist
-          lha a /github/workspace/game.lha dist showcase.exe
+          /bin/sh -c "cd /github/workspace/game-build/dist &&
+          lha a /github/workspace/game.lha dist showcase.exe"
