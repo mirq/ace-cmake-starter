@@ -7,7 +7,7 @@ string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
 # Version number in format X.Y.Z
 set(VER_X 0)
 set(VER_Y 0)
-set(VER_Z 1)
+set(VER_Z 4)
 set(VER_FULL "${VER_X}.${VER_Y}.${VER_Z}")
 
 if(NOT AMIGA)
