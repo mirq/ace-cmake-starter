@@ -34,3 +34,8 @@ jobs:
         args: >
           /bin/sh -c "cd /github/workspace/game-build/dist &&
           lha a /github/workspace/game-build/game.lha dist showcase.exe"
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: game
+        path: /github/workspace/game-build/game.lha
