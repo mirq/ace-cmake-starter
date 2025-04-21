@@ -18,7 +18,7 @@ jobs:
       with:
         submodules: recursive  # Important for fetching ACE and the cross toolchains
     - name: Create out-dir
-      run: mkdir /github/workspace/game-build
+      run: mkdir /home/runner/work/ace-cmake-starter/ace-cmake-starter/game-build
     - name: Build with custom Docker image
       uses: docker://mirqqq/amiga-development:v0.3
       with:
