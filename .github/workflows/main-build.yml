@@ -38,4 +38,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: game
-        path: /github/workspace/game-build/game.lha
+        path: /home/runner/work/ace-cmake-starter/ace-cmake-starter/game-build/game.lha
