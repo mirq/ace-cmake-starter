@@ -7,10 +7,20 @@
         {
             "type": "amiga",
             "request": "launch",
-            "name": "Run-Debug",
+            "name": "Run-Debug-Win32",
             "config": "A500",
             "program": "${workspaceFolder}\\build\\showcase",
-            "kickstart": "C:\\amiga\\kick13.rom"
+            "kickstart": "C:\\amiga\\kick13.rom",
+            "preLaunchTask": "CMake: Build game"
+        },
+        {
+            "type": "amiga",
+            "request": "launch",
+            "name": "Run-Debug-Linux",
+            "config": "A500",
+            "program": "${workspaceFolder}\\build\\showcase",
+            "kickstart": "~/amiga/kick13.rom",
+            "preLaunchTask": "CMake: Build game"
         }
 
     ]

@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "CMake: Build game",
+			"command": "build",
+			"targets": [
+				"showcase.elf"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"detail": "Build game"
+		}
+	]
+}
