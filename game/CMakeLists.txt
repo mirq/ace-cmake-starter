@@ -46,4 +46,5 @@ add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
 
 target_link_libraries(${GAME_LINKED} ace)
 
-file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/dist)
+file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/dist) #used for github builds
+file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}) #used for vscode debug

@@ -7,9 +7,9 @@
         {
             "type": "amiga",
             "request": "launch",
-            "name": "Run",
+            "name": "Run-Debug",
             "config": "A500",
-            "program": "build\\showcase",
+            "program": "${workspaceFolder}\\build\\showcase",
             "kickstart": "C:\\amiga\\kick13.rom"
         }
 
