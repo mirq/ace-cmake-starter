@@ -1,0 +1,9 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/game",
+    "cmake.useVsDeveloperEnvironment": "never",
+    "cmake.configureArgs": [
+        "-DCMAKE_TOOLCHAIN_FILE=..\\AmigaCMakeCrossToolchains\\m68k-bartman.cmake",
+        "-G Unix Makefiles",
+        "-DVSCODE_AMIGA_EXTENSION_PATH=C:\\Users\\mirek\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.9"
+    ]
+}
