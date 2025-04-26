@@ -11,7 +11,7 @@ Ace is not only a library it's a framework for Amiga Game development. ACE with 
 1. Install cygwin with make package: https://www.cygwin.com/setup-x86_64.exe
 1. Install Visual Studio Code from: https://code.visualstudio.com/
 1. Install git for windows: https://git-scm.com/downloads/win
-1. [Clone repository with submodules](##submodules)
+1. [Clone repository with submodules](#How-to-clone-repository-with-submodules)
 1. Run bat script from AmigaCMakeCrossToolchains sub folder
 1. Open VSCode
 1. Install extensions:
@@ -26,7 +26,7 @@ Ace is not only a library it's a framework for Amiga Game development. ACE with 
 ## How to use it on Linux
 1. Install cmake, make, git from using package manager
 1. Install vscode
-1. [Clone repository with submodules](##submodules)
+1. [Clone repository with submodules](#How-to-clone-repository-with-submodules)
 1. Run sh script from AmigaCMakeCrossToolchains sub folder
 1. Open VSCode
 1. Install extensions:
@@ -38,7 +38,7 @@ Ace is not only a library it's a framework for Amiga Game development. ACE with 
 ![how to run cmake img](docs/cmake_run.png)
 1. Go to run and debug and start "Run-Debug-Linux"
 
-## How to clone repository with submodules [submodules]
+## How to clone repository with submodules
 ```
 git clone --recursive git@github.com:mirq/ace-cmake-starter.git my-amiga-project
 ```
