@@ -3,6 +3,7 @@
     "cmake.useVsDeveloperEnvironment": "never",
     "cmake.configureArgs": [
         "-DCMAKE_TOOLCHAIN_FILE=..\\AmigaCMakeCrossToolchains\\m68k-bartman.cmake",
-        "-G Unix Makefiles"
+        "-G Unix Makefiles",
+        "-DCMAKE_MAKE_PROGRAM=mingw32-make.exe"
     ]
 }
