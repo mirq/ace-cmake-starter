@@ -21,7 +21,7 @@ jobs:
     - name: Create out-dir
       run: mkdir /home/runner/work/ace-cmake-starter/ace-cmake-starter/game-build
     - name: Set permissions
-      run: chmod 777 /home/runner/work/ace-cmake-starter/ace-cmake-starter/game-build
+      run: chmod -R 777 /home/runner/work/ace-cmake-starter/ace-cmake-starter/
     - name: Build tools
       uses: docker://mirqqq/amiga-development:v0.4
       with:
