@@ -24,7 +24,7 @@ file(GLOB_RECURSE HEADERS src/*.h)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 set(RES_DIR ${CMAKE_CURRENT_LIST_DIR}/res)
-set(DATA_DIR ${CMAKE_CURRENT_BINARY_DIR}/data)
+set(DATA_DIR ${RES_DIR}/data)
 
 # ACE
 add_subdirectory(deps/ace)
@@ -48,3 +48,10 @@ target_link_libraries(${GAME_LINKED} ace)
 
 file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/dist) #used for github builds
 file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}) #used for vscode debug
+
+convertPalette(${GAME_LINKED} ${RES_DIR}/inteleaved.pal ${DATA_DIR}/amidb32.plt)
+convertBitmaps(
+  TARGET ${GAME_LINKED} PALETTE ${RES_DIR}/inteleaved.pal
+  SOURCES ${RES_DIR}/32c_pal_interleaved.png
+  DESTINATIONS ${DATA_DIR}/32c_pal_interleaved.bm
+)
