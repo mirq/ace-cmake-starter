@@ -45,11 +45,11 @@ add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
 )
 
 add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy ${RES_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}/dist
+    COMMAND ${CMAKE_COMMAND} -E copy_directory  ${RES_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}/dist
 )
 
 add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy ${RES_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}
+    COMMAND ${CMAKE_COMMAND} -E copy_directory  ${RES_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 target_link_libraries(${GAME_LINKED} ace)
