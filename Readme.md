@@ -40,5 +40,5 @@ Ace is not only a library it's a framework for Amiga Game development. ACE with 
 
 ## How to clone repository with submodules
 ```
-git clone --recursive git@github.com:mirq/ace-cmake-starter.git my-amiga-project
+git clone --recursive https://github.com/mirq/ace-cmake-starter.git my-amiga-project
 ```
