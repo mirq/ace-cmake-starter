@@ -44,10 +44,16 @@ add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy ${GAME_EXE} ${CMAKE_CURRENT_BINARY_DIR}/dist
 )
 
+add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy ${RES_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}/dist
+)
+
+add_custom_command(TARGET ${GAME_LINKED} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy ${RES_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 target_link_libraries(${GAME_LINKED} ace)
 
-file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/dist) #used for github builds
-file(COPY "${RES_DIR}/data" DESTINATION ${CMAKE_CURRENT_BINARY_DIR}) #used for vscode debug
 
 convertPalette(${GAME_LINKED} ${RES_DIR}/inteleaved.pal ${DATA_DIR}/amidb32.plt)
 convertBitmaps(
