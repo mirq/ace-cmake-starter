@@ -26,7 +26,7 @@ jobs:
       uses: docker://mirqqq/amiga-development:v0.4
       with:
         args: >
-          /bin/sh -c "cd /github/workspace/game-build && ls -l &&build_ace_tools.sh"
+          /bin/sh -c "cd /github/workspace && ls -l && build_ace_tools.sh"
     - name: Build with custom Docker image
       uses: docker://mirqqq/amiga-development:v0.4
       with:
