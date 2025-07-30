@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AmigaCMakeCrossToolchains" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/game/cmake-build-debug/_deps/bartman_gcc_support-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/game/cmake-build-release/_deps/bartman_gcc_support-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/game/deps/ace" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/game/deps/ace/tools/build/_deps/fmt-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/game/deps/ace/tools/build/_deps/freetype-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/game/deps/ace/tools/build/_deps/freetype-src/subprojects/dlg" vcs="Git" />
+  </component>
+</project>
