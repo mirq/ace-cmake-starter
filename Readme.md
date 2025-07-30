@@ -32,6 +32,7 @@ Ace is not only a library it's a framework for Amiga Game development. ACE with 
 1. Install vscode
 1. [Clone repository with submodules](#How-to-clone-repository-with-submodules)
 1. Run sh script from AmigaCMakeCrossToolchains sub folder
+1. Run build_ace_tools.sh
 1. Open VSCode
 1. Install extensions:
     - CMake tools - https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools
@@ -43,6 +44,10 @@ Ace is not only a library it's a framework for Amiga Game development. ACE with 
 1. Select unspecified kit if asked
 ![how to run cmake img](docs/cmake_kit.png)
 1. Go to run and debug and start "Run-Debug-Linux"
+
+## Clion setup
+Set cmake options:
+```--toolchain ../AmigaCMakeCrossToolchains/m68k-bartman.cmake```
 
 ## How to clone repository with submodules
 ```
